@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="88.098" height="88.098" viewBox="0 0 88.098 88.098">
+  <g id="Group_23506" data-name="Group 23506" transform="translate(-10744.875 -6745)">
+    <rect id="Rectangle_4070" data-name="Rectangle 4070" width="88.098" height="88.098" transform="translate(10744.875 6745)" fill="#ef695c"/>
+    <g id="Group_23471" data-name="Group 23471" transform="translate(10113.377 6659.479)">
+      <path id="Path_44257" data-name="Path 44257" d="M679.411,153.064h-3.869V149.2a1.281,1.281,0,1,0-2.562,0v3.869h-3.869a1.281,1.281,0,0,0,0,2.562h3.869v3.869a1.281,1.281,0,0,0,2.562,0v-3.869h3.869a1.281,1.281,0,0,0,0-2.562Z" fill="#fff"/>
+      <path id="Path_44258" data-name="Path 44258" d="M674.261,133.223a8.261,8.261,0,1,0,8.261,8.262A8.262,8.262,0,0,0,674.261,133.223Zm3.618,11.357h-7.237a1.067,1.067,0,0,1,0-2.135h7.237a1.067,1.067,0,0,1,0,2.135Zm0-4.056h-7.237a1.067,1.067,0,0,1,0-2.135h7.237a1.067,1.067,0,0,1,0,2.135Z" fill="#fff"/>
+      <path id="Path_44259" data-name="Path 44259" d="M685.077,134.258l-.722-4.225c0-.013-.01-.022-.013-.035a1.259,1.259,0,0,0-.136-.378c-.008-.013-.017-.024-.025-.037a1.277,1.277,0,0,0-.245-.292c-.01-.008-.017-.018-.027-.027l-.014-.013a1.284,1.284,0,0,0-.323-.183l-.064-.026a1.265,1.265,0,0,0-.383-.068c-.012,0-.021-.006-.033-.006h-4a1.281,1.281,0,0,0,0,2.562h1.321l-3.249,4.034a1.281,1.281,0,0,0,1.995,1.608l3.146-3.907.244,1.425a1.279,1.279,0,0,0,1.261,1.065,1.335,1.335,0,0,0,.217-.018A1.281,1.281,0,0,0,685.077,134.258Z" fill="#fff"/>
+    </g>
+    <text id="_05" data-name="05" transform="translate(10788.925 6762.144)" fill="#fff" font-size="14" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="-8.032" y="0">05</tspan></text>
+    <text id="GENDER_EQUALITY" data-name="GENDER EQUALITY" transform="translate(10788.925 6775.519)" fill="#fff" font-size="8" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="-34.801" y="0">GENDER EQUALITY</tspan></text>
+  </g>
+</svg>

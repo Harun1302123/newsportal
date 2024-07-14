@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: $K8S_SERVICE_NAME
+  namespace: $K8S_NAMESPACE
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: $K8S_SERVICE_NAME
+  template:
+    metadata:
+      annotations:
+        kubernetes.io/change-cause: $DOCKER_TAG
+      labels:
+        app: $K8S_SERVICE_NAME
+    spec:
+      volumes:
+      - name: nfis-uat
+        nfs:
+          path: /var/k8_nfs/nfis_uat
+          server: 172.17.9.153
+      containers:
+      - envFrom:
+        - configMapRef:
+            name: $K8S_CONFIGMAP_NAME
+        - secretRef:
+            name: $K8S_SECRET_NAME
+        image: $DOCKER_TAG
+        imagePullPolicy: IfNotPresent
+        name: $K8S_SERVICE_NAME
+        ports:
+        - containerPort: 80
+          name: $CONTAINER_PORT_NAME
+          protocol: TCP
+        volumeMounts:
+        - mountPath: /var/www/html/public/uploads
+          name: nfis-uat
+      imagePullSecrets:
+      - name: $REGISTRY
+      restartPolicy: Always
+      hostAliases:
+      - ip: 172.17.10.8
+        hostnames:
+        - docker-reg.oss.net.bd      
+        

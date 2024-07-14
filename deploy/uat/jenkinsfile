@@ -1,0 +1,125 @@
+pipeline {
+    agent any
+    environment {
+        REGISTRY="docker-reg.oss.net.bd"
+        DEPLOYMENT_ENV="uat"
+        IMAGE_CREATED_BY="jenkins"
+        PROJECT_NAME="nfis"
+        K8S_NAMESPACE="uat-nfis"
+        DEPLOYMENT_ENV_VERSION="$K8S_NAMESPACE"
+        BUILD_URL=""
+        SERVICE_NAME="nfis-tracker-uat"
+        
+        //Port configuration
+        K8S_CONTAINER_AND_TARGET_PORT="80"
+        K8S_SERVICE_PORT="80"
+        K8S_NODE_PORT=30012
+		
+        CONTAINER_PORT_NAME="nfis-cport"
+        SERVICE_PORT_NAME="http"
+        
+        //Memory allocation       
+        // K8S_MAX_RAM_POD="750Mi"
+        
+        //Application configurations and credentials
+        K8S_CONFIGMAP_NAME="nfis-tracker-v2-cmp"
+        K8S_SECRET_NAME="nfis-tracker-v2-sec"
+     
+        //Host specific configuration
+        HOST_VOLUME_LOCATION="$JENKINS_DATA_LOCATION"
+        M2_REPO="$JENKINS_DATA_LOCATION/.m2"
+        
+
+        PROJECT_LOCATION="$HOST_VOLUME_LOCATION/workspace/$JOB_NAME"
+        IMAGE_VERSION="$BUILD_NUMBER-$IMAGE_CREATED_BY-$DEPLOYMENT_ENV_VERSION"
+        IMAGE_REPOSITORY_NAME="$REGISTRY/$PROJECT_NAME/$SERVICE_NAME"
+        DOCKER_TAG="$IMAGE_REPOSITORY_NAME:$IMAGE_VERSION"
+		//DOCKER_TAG="$REGISTRY/npf_backennd:1.60"
+        DEPLOYMENT_DIRECTORY="./deploy"
+        
+        //k8s cluster specific configuration
+        K8S_SERVICE_NAME="$SERVICE_NAME"
+        K8S_CHANGE_CAUSE="$IMAGE_VERSION"
+
+        dockerImage = ''
+        dockerRegistryCredential='docker-reg.oss.net.bd'
+        DOCKER_REGISTRY_URL="https://$REGISTRY"
+        DEPLOYMENT_TIMEOUT="500s"
+
+	    }
+
+
+    post {
+        always {
+            echo 'Discord Notification.'
+            discordSend description: "$PROJECT_NAME-$SERVICE_NAME", scmWebUrl: 'https://codelab.ba-systems.com/ossp/sdg-tracker-v2.git', showChangeset: true, 
+            footer: "message: *${currentBuild.currentResult}:* Job ${env.JOB_NAME} build ${env.BUILD_NUMBER} \n More info at: ${env.BUILD_URL}", 
+            webhookURL: 'https://discord.com/api/webhooks/1201818302243164170/z9ChuYz29HNXJFEuQodgYB08SJHlSfZXHUK1W8O_b3W3MUgXQBo6cYWBp8WpzSI4OF39'
+            }   
+        }        
+
+
+    stages {
+
+     stage('Init') {
+            steps {
+                sh '''
+                COMMIT_ID=$(git log -1|head -1|awk -F ' ' ' {print $NF}')
+                echo "........result of commit .... $COMMIT_ID"
+                '''
+            }
+        }
+      
+     stage('Building Docker image') { 
+            steps { 
+                script { 
+                    dockerImage = docker.build("$DOCKER_TAG", "-f ./Dockerfile .")
+                }
+                sh '''
+                docker images|grep $PROJECT_NAME
+                '''
+            } 
+        }
+
+      stage('Push docker image') {
+            steps{
+                script {
+                    docker.withRegistry( "$DOCKER_REGISTRY_URL", dockerRegistryCredential ) {
+                        dockerImage.push()
+                        sh "docker images|grep $PROJECT_NAME"
+                    }
+                    
+                }
+            }
+        }
+     
+
+     stage('Deleted image After upload to Registry') {
+            steps {
+                echo "Cleaning local docker registry $DOCKER_TAG image"
+                sh 'docker rmi $DOCKER_TAG'
+            }
+        }
+ 
+ 
+ stage('K8S Deployment') {
+            steps {
+                sh '''
+                envsubst < $DEPLOYMENT_DIRECTORY/$DEPLOYMENT_ENV/deploy.yaml | xargs -I{} echo {}
+                envsubst < $DEPLOYMENT_DIRECTORY/$DEPLOYMENT_ENV/deploy.yaml | kubectl apply -f -
+		        kubectl rollout status -n $K8S_NAMESPACE deployment $SERVICE_NAME --timeout 120s
+                
+                '''
+            }
+        }
+     stage('Deploy service') {
+            steps {
+                sh '''
+                envsubst < $DEPLOYMENT_DIRECTORY/$DEPLOYMENT_ENV/service.yaml | xargs -I{} echo {}
+                envsubst < $DEPLOYMENT_DIRECTORY/$DEPLOYMENT_ENV/service.yaml | kubectl apply -f -
+                '''
+            }
+        }
+
+    }
+}

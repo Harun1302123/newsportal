@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: $K8S_SERVICE_NAME
+  namespace: $K8S_NAMESPACE
+spec:
+  ports:
+  - port: $K8S_SERVICE_PORT
+    name: $CONTAINER_PORT_NAME
+    nodePort: $K8S_NODE_PORT
+    protocol: TCP
+    targetPort: $K8S_CONTAINER_AND_TARGET_PORT
+  selector:
+    app: $K8S_SERVICE_NAME
+  type: NodePort

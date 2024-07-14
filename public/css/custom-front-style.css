@@ -1,0 +1,832 @@
+/* Biography */
+.nfis-bio-msg-item {
+    position: relative;
+    margin-bottom: 10px;
+    padding: 25px 200px;
+    border-radius: 3px;
+    min-height: 100px;
+    background-color: white;
+}
+
+.nfis-bio-msg-item .msg-item-photo {
+    position: absolute;
+    width: 140px;
+    left: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}
+
+.nfis-bio-msg-item .msg-item-photo img {
+    border-radius: 10px;
+    display: block;
+    max-width: 100%;
+}
+
+.nfis-bio-info {
+    width: 100%;
+}
+
+.nfis-bio-info h2 {
+    font-size: 34px;
+    line-height: 1.3;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+
+/* Login */
+.nfis-login-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.login-banner {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding: 24px;
+    border: 1px solid #C5C5C5;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-banner img {
+    display: block;
+    height: 100%;
+    width: auto;
+}
+
+/*FAQ*/
+
+
+/**
+ * Home Page Section
+ */
+.sdg-section-block {
+    position: relative;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.sdg-sec-title {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 30px;
+    color: #505F79;
+    text-align: center;
+}
+
+.sdg-sec-title h2 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.sdg-sec-title h4 {
+    margin-bottom: 5px;
+}
+
+
+/**
+ * Indicator Page
+ */
+.indicator-acd-item {
+    background: #ffffff;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    color: #63747B;
+    border-radius: 6px;
+    box-shadow: 0px 2px 11px -2px rgba(0, 0, 0, 0.06);
+    margin-bottom: 20px;
+}
+
+.indicator-acd-item .accordian-head {
+    min-height: 80px;
+    position: relative;
+    padding: 20px 80px 20px 25px;
+    background: #318DDE;
+    cursor: pointer;
+    color: #ffffff;
+    -webkit-transition: background 0.3s ease-in-out 0s;
+    -moz-transition: background 0.3s ease-in-out 0s;
+    -o-transition: background 0.3s ease-in-out 0s;
+    -ms-transition: background 0.3s ease-in-out 0s;
+    transition: background 0.3s ease-in-out 0s;
+}
+
+.indicator-acd-item .accordian-head.collapsed {
+    background: #ffffff;
+    color: #1B3540;
+}
+
+
+.indicator-acd-item .indicator-acd-title h4,
+.indicator-acd-item .indicator-acd-title h3 {
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+.indicator-acd-item .indicator-acd-title h4 {
+    font-size: 16px;
+}
+
+.indicator-acd-item .indicator-acd-title p {
+    margin: 5px 0;
+}
+
+.indicator-acd-item .indicator-acd-content {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    padding: 25px;
+}
+
+.indicator-acd-item .indicator-acd-content h3,
+.indicator-acd-item .indicator-acd-content h4 {
+    font-size: 16px;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+.indicator-acd-item .indicator-acd-content h3 {
+    font-size: 20px;
+}
+
+.indicator-acd-item .indicator-acd-content ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.indicator-acd-item .indicator-acd-content ul li {
+    position: relative;
+    list-style: none;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+    padding-left: 18px;
+}
+
+.indicator-acd-item .indicator-acd-content ul li:before {
+    content: "";
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background: #000000;
+    position: absolute;
+    left: 0;
+    top: 8px;
+}
+
+.sdg-indicator-feature .npi-target-tablists {
+    padding-left: 280px;
+    position: relative;
+}
+
+.sdg-indicator-feature .npi-target-tablists .indicators-feature-logo {
+    position: absolute;
+    width: 262px;
+    left: 0;
+    top: 0;
+}
+
+.sdg-indicator-feature .npi-target-tablists .indicators-feature-logo img {
+    display: block;
+    width: 100%;
+}
+
+.sdg-indicator-feature .npi-target-tablists .nav-tabs .nav-item {
+    flex-basis: 12.5%;
+    width: 12.5%;
+}
+
+.sdg-indicator-feature .npi-target-tablists .nav-tabs {
+    position: relative;
+}
+
+/*News*/
+.nfis-post-details h1,
+.nfis-post-details h2,
+.nfis-post-details h3,
+.nfis-post-details h4,
+.nfis-post-details h5,
+.nfis-post-details h6,
+.nfis-post-details span,
+.nfis-post-details p,
+.nfis-post-details pre {
+    white-space: break-spaces;
+}
+
+
+/*Important Links*/
+
+.important-link .link_list i {
+    height: fit-content;
+    background: #00aed6;
+    color: #ffff;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+
+/* Resource */
+.site-main-content .resource {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.site-main-content .resource .resource-file {
+    border-bottom: 1px solid grey;
+    padding: 10px;
+}
+
+.site-main-content .resource .resource-file .sl,
+.site-main-content .resource .resource-file .name {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.site-main-content .resource .resource-file .pdf i {
+    font-size: 24px;
+    font-weight: 600;
+    color: #f7413a;
+}
+
+.site-main-content .resource .resource-file .download i {
+    font-size: 24px;
+    font-weight: 600;
+    color: #0098c9;
+    padding-left: 30px;
+}
+
+.site-main-content .resource .resource-file .icon-set {
+    display: flex;
+    justify-content: center;
+
+}
+
+.site-map .nav-link {
+    padding: 4px 20px;
+    font-weight: 500;
+    font-family: system-ui;
+}
+
+.nfis-green-box {
+    max-width: 100%!important;
+    background: #0e009c7a;
+}
+.nfis-green-box .fnc-subtitle
+{
+    font-size: 32px;
+}
+.nfis-green-box h3
+{
+    font-weight: bold;
+}
+/* Event Calander */
+
+.home-calender{
+    position: relative;
+    background: #ffffff;
+    box-shadow: 0px 3.2572px 6.51441px rgba(94, 73, 155, 0.1);
+    border-radius: 6px;
+    padding: 35px  45px;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+.home-calender h3
+{
+    font-size: 25px;
+    font-weight: 700;
+}
+.home-calender .calendar .month
+{
+    font-size: 20px;
+    font-weight: 500;
+}
+.home-calender .calendar .year
+{
+    font-size: 15px!important;
+    font-weight: 400;
+}
+.home-calender .sdg-cal-seemore-btn{
+    position: absolute;
+    bottom: -20px;
+    right: 14px;
+    height: 76px;
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+    font-size: 14px;
+}
+.calendar td
+{
+    padding: 5px 5px!important;
+}
+.calendar .day
+{
+    position: relative;
+    display: inline-block;
+    width: 25px!important;
+    height: 25px!important;
+    line-height: 20px!important;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 0px!important;
+}
+
+.schedule-data
+{
+    padding: 10px 15px 10px 15px;
+}
+.schedule-data .row
+{
+    margin-top: 10px;
+    border-bottom: 1px solid #adadad94;
+}
+.schedule-data .date p
+{
+    font-size: 16px;
+    margin-bottom: 0px;
+    font-weight: 500;
+}
+.schedule-data .date span
+{
+    font-size: 15px;
+    margin-bottom: 0px;
+    font-weight: 600;
+    padding-left: 5px;
+    line-height: 15px;
+}
+.schedule-data .date i
+{
+    color: #949494;
+}
+
+
+.schedule-data .time
+{
+    margin-left: 10px;
+    font-size: 12px;
+}
+
+.schedule-data .schedule-info .title i
+{
+    color: #89b874;
+}
+.schedule-data .schedule-info .title
+{
+    color: #353635;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 0px;
+    display: block;
+    line-height: 18px;
+    display: flex;
+    column-gap: 5px;
+}
+.schedule-data .schedule-info .details
+{
+    line-height: 18px;
+    font-size: 14px;
+    padding: 0px 20px 0px 20px;
+    white-space: break-spaces;
+}
+
+.calendar .event-container
+{
+    background: #f3f3f3!important;
+}
+.calendar .filler
+{
+    background: #f3f3f3!important;
+
+}
+.calendar .event-container .event-wrapper
+{
+    transition: all 1.5s ease;
+}
+
+.calendar .event-wrapper .event-hour
+{
+    display: none;
+}
+
+/* Credit Page CSS*/
+.trapezoid, .trapezoid-2, .trapezoid-3 {
+    border-bottom: 50px solid #588DBE;
+    border-left: 25px solid white;
+    border-right: 25px solid white;
+    height: 0;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+}
+.trapezoid h4, .trapezoid-2 h4, .trapezoid-3 h4
+{
+    display: inline-block;
+    margin-bottom: 0px;
+    margin-top: 5px;
+    position: relative;
+    padding-left: 30px;
+    padding-right: 30px;
+    left: -26px;
+}
+
+.trapezoid{ width: 320px;}
+.trapezoid h4{ width: 320px;}
+.trapezoid-2{ width: 520px;}
+.trapezoid-2 h4{ width: 520px;}
+.trapezoid-3{ width: 320px;}
+.trapezoid-3 h4{ width: 320px;}
+
+@media  (max-width: 576px) {
+    .trapezoid-2{
+        width: 320px;
+        border-bottom: 70px solid #588DBE;
+    }
+    .trapezoid-2 h4{ width: 320px;}
+}
+.credit-card {
+    background: #FFF;
+    box-shadow: 0px 0px 0px 0px rgb(0 0 0 / 0%);
+    flex-direction: row;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    row-gap: 25px;
+    column-gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.credit-card .credit-card-item .card-img
+{
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    -o-transition: all 0.3s ease-in-out 0s;
+    -ms-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+
+}
+.credit-card .credit-card-item
+{
+    flex: 0 0 48%;
+    padding: 10px 20px 10px 20px;
+    margin-bottom: 10px;
+    min-height: 190px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    column-gap: 30px;
+    justify-content: center;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    -o-transition: all 0.3s ease-in-out 0s;
+    -ms-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+    box-shadow: 0px 0px 5px 0px rgb(0 0 0 / 15%);
+    border-radius: 15px;
+}
+.credit-card .credit-title {
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    font-family: inherit;
+    color: black;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    -o-transition: all 0.3s ease-in-out 0s;
+    -ms-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+.credit-details {
+    color: #4B82B6;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 26px;
+    margin-bottom: 10px;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    -o-transition: all 0.3s ease-in-out 0s;
+    -ms-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+.credit-card .credit-position {
+    color: #89A9C7;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    font-family: sans-serif;
+}
+.credit-card .line
+{
+    display: block;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    -o-transition: all 0.3s ease-in-out 0s;
+    -ms-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+.credit-card-item:hover .card-img
+{
+    border: 3px solid #fff;
+}
+.credit-card-item:hover .line
+{
+    width: 100%;
+    background: white;
+}
+
+.credit-card-item:hover .credit-title
+{
+    color: white;
+
+}
+.credit-card-item:hover .credit-details{
+    color: white;
+    font-size: 16px;
+}
+.credit-card-item:hover .credit-position
+{
+    color: white;
+}
+.credit-card .credit-details {
+    color: rgba(75, 130, 182, 1);
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    display: inline-block;
+    font-family: sans-serif;
+}
+.credit-card .card-desc
+{
+    width: 300px;
+}
+
+.nfis-filter-sec{
+    position: relative;
+    display: flex;
+    height: 68px;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 6px;
+    padding: 12px 20px 12px 20px;
+    width: 100%;
+    max-width: 420px;
+    margin: 15px 0;
+}
+.nfis-filter-sec .filter-title
+{
+    position: initial;
+    width: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    background: #318DDE;
+    color: #fff;
+    border-radius: 6px 0 0 6px;
+    padding: 10px 10px;
+    margin-right: 10px;
+}
+.post-lists-item
+{
+    position: relative;
+    padding: 10px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    flex-wrap: nowrap;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    color: #000000;
+    box-shadow: 0px 3.2572px 6.51441px rgba(94, 73, 155, 0.1);
+}
+.nfis-post-details
+{
+    background: #ffffff;
+    position: relative;
+    padding: 20px;
+    color: #63747B;
+    box-shadow: 0px 3.2572px 6.51441px rgba(94, 73, 155, 0.1);
+}
+.nfis-filter-sec .icon-filter::before
+{
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: "\f0b0";
+    font-size: 20px;
+}
+/*.nfis-publication .nfis-post-sidebar*/
+/*{*/
+/*    max-height: 620px;*/
+/*    overflow-y: scroll;*/
+/*}*/
+/*.nfis-publication .nfis-post-sidebar{*/
+/*    scrollbar-width: thin;*/
+
+/*}*/
+
+@media (max-width:992px) {
+    .credit-card
+    {
+        flex-direction: column;
+    }
+
+}
+@media (max-width:768px) {
+    .credit-card .credit-card-item
+    {
+        flex-direction: column;
+        row-gap: 20px;
+    }
+    .card-desc
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .credit-card .credit-details
+    {
+        text-align: center;
+    }
+    .credit-card .credit-title, .credit-card .credit-position
+    {
+        text-align: center;
+    }
+}
+/* Credit Page CSS*/
+
+
+
+/*Homepage Contact US*/
+.contact-us .contact-details
+{
+
+}
+.contact-us .contact-details .name
+{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.contact-us .contact-details .designation
+{
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+.contact-us .contact-details .contact-info
+{
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+.contact-us .contact-details .contact-details-data
+{
+    margin-bottom: 20px;
+    padding-top: 10px;
+}
+/* Biography Responsive */
+@media (min-width: 1450px) {
+    .nfis-bio-info h2 {
+        font-size: 34px;
+    }
+}
+
+@media (min-width: 1680px) {
+    .nfis-bio-info h2 {
+        font-size: 44px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .nfis-bio-msg span {
+        font-size: 18px;
+    }
+
+    .nfis-bio-info h2 {
+        font-size: 28px;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .schedule-data
+    {
+        margin-top: 20px;
+    }
+}
+
+
+@media (max-width: 575px) {
+    .nfis-bio-msg span {
+        font-size: 18px;
+    }
+
+    .nfis-bio-info h2 {
+        font-size: 18px;
+    }
+
+    .nfis-bio-msg span {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 991px) {
+    .nfis-bio-info {
+        padding: 30px 0 0;
+    }
+}
+
+@media (max-width: 390px) {
+    .nfis-bio-info h2 {
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 992px) {
+    .resView {
+        display: none !important;
+    }
+
+
+    .site-main .site-header .navbar-expand-lg .navbar-collapse {
+        justify-content: flex-end;
+    }
+
+    .dropdown .dropdown-menu {
+        left: auto;
+        right: 0;
+    }
+
+    .sdg-post-details .row {
+        flex-direction: row-reverse;
+    }
+
+    .sdg-details-sidebar {
+        padding-right: 20px;
+    }
+
+    .sdg-tab-pane .sdg-card {
+        padding: 32px;
+    }
+
+    .sdg-tab-pane .sdg-card .tab-desc {
+        padding-right: 20px;
+    }
+
+    .accordian-head {
+        flex-wrap: nowrap;
+    }
+
+    .tier-acd-lists-item {
+        text-align: center;
+    }
+
+    .tier-acd-lists-item .row {
+        align-items: center;
+    }
+
+    .tier-acd-lists-item p {
+        display: inline-block;
+        text-align: left;
+    }
+
+
+}
+
+@media (min-width: 1450px) {
+    .nfis-green-box {
+        max-width: 100%!important;
+    }
+}

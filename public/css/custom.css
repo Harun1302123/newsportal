@@ -1,0 +1,128 @@
+/*img {*/
+/*    width: 100%;*/
+/*    height: auto;*/
+/*}*/
+.error {
+    color: red !important;
+    border: 1px solid red;
+    opacity: 1;
+}
+
+.has-error .select2-selection
+{
+    border: 1px solid red;
+    opacity: 1;
+}
+input[type="radio"].error,
+input[type="checkbox"].error {
+    outline: 1px solid red;
+}
+.required-star:after {
+    color: red;
+    content: " *";
+}
+.help-block {
+    color: red;
+}
+
+.sidebar-dark-primary .nav-sidebar.nav-legacy>.nav-item>.nav-link.active, .sidebar-light-primary .nav-sidebar.nav-legacy>.nav-item>.nav-link.active
+{
+    background-color: #1A6CDA;
+    color: #FFFFFF!important;
+}
+[class*=sidebar-light-] .sidebar a {
+    color: #1A6CDA;
+}
+
+[class*=sidebar-light] .nav-legacy .nav-treeview>.nav-item>.nav-link.active, [class*=sidebar-light] .nav-legacy .nav-treeview>.nav-item>.nav-link:focus, [class*=sidebar-light] .nav-legacy .nav-treeview>.nav-item>.nav-link:hover
+{
+    background-color: rgba(0,0,0,.1);
+    color: #343a40!important;
+}
+.btn-info
+{
+    background-color: #1A6CDA;
+    color: #FFFFFF!important;
+}
+
+/*.card.collapsed-card .card-header*/
+/*{*/
+/*    background-color: #1A6CDA;*/
+/*    color: #FFFFFF!important;*/
+/*}*/
+.card.collapsed-card .btn
+{
+    color: #1A6CDA;
+}
+.dashboard-card .card .btn i
+{
+    color: #1A6CDA;
+}
+.btn-outline-dark
+{
+    color: #1A6CDA;
+    border-color: #1A6CDA;
+}
+.btn-outline-dark:hover
+{
+    color: #fff;
+    background-color: #1A6CDA;
+    border-color: #1A6CDA;
+}
+.btn-outline-dark:hover > i
+{
+    color: #ffff!important;
+}
+.calendar .day.has-event
+{
+    border: 2px solid #1A6CDA;
+    border-radius: 50%;
+    background-color: transparent;
+    color: #1A6CDA;
+}
+.calendar .day.today
+{
+    background-color: #28a745;
+    border: 2px solid #1A6CDA;
+    color: white;
+}
+.calendar header .btn-next, .calendar header .btn-prev
+{
+    border: 2px solid #1A6CDA;
+    background-color: #1A6CDA;
+    color: #ffff;
+}
+
+.calendar header .simple-calendar-btn:hover
+{
+    background-color: transparent;
+    color: #1A6CDA;
+}
+.navbar-nav .arrow-after ::after
+{
+    content: 'Hi';
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #9b9d9b;
+    border-radius: 10px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}

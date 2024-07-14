@@ -1,0 +1,15 @@
+<?php
+
+namespace App\Modules\Settings\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Area extends Model {
+
+    protected $table = 'area_info';
+    protected $fillable = array(
+      'area_id','area_nm','pare_id', 'area_type','area_nm_ban'
+    );
+
+    public $timestamps = false;
+}
